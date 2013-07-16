@@ -238,7 +238,7 @@ class PDFextract
 
 end
 
-coords = '[{"x1":59,"y1":55,"x2":237,"y2":95,"width":178,"height":40,"id":0,"page":1}]'
-parsed = JSON.parse(coords)
-puts parsed[0]
-puts PDFextract.extract_ocr("document_560_1.pdf",parsed[0])
+#coords = '[{"x1":59,"y1":55,"x2":237,"y2":95,"width":178,"height":40,"id":0,"page":1}]'
+#parsed = JSON.parse(coords)
+#puts parsed[0]
+#puts PDFextract.extract_ocr("document_560_1.pdf",parsed[0])
