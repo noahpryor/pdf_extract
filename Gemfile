@@ -9,7 +9,7 @@ platform :jruby do
 	gem 'docsplit'
 	gem "bundler", ">= 1.0.0"
 	gem "jeweler", "~> 1.8.4"
-
+	gem "rake", ">= 10.0.3"
 end
 
 # Add dependencies to develop your gem here.
