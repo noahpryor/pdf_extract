@@ -211,7 +211,7 @@ class PDFextract
 						}
 					},
 					{
-						name: 'units_table'
+						name: 'units_table',
 						kind: 'table',
 						dimensions: {
 							x1: 0,
