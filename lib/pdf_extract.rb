@@ -1,7 +1,7 @@
 require 'java'
 require 'tesseract'
 require 'docsplit'
-require 'image_voodoo'
+#require 'image_voodoo'
 require 'json'
 require 'open-uri'
 class PageExtractor
@@ -31,13 +31,13 @@ class PageExtractor
 
 	def crop_image(d)
 		new_image_name = "CR.png"
-		ImageVoodoo.with_image(image_path) do |img|
+	#	ImageVoodoo.with_image(image_path) do |img|
 			x1 = d[:x1]	
 			x2 = d[:x2]
 			y1 = d[:y1]
 			y2 = d[:y2]
-			img.with_crop(x1,y1,x2,y2) { |img2| img2.save new_image_name }
-		end
+	#		img.with_crop(x1,y1,x2,y2) { |img2| img2.save new_image_name }
+	#	end
 		return new_image_name
 	end
 
@@ -239,7 +239,7 @@ class PDFextract
 	end
 
 end
-
+puts 'woo'
 #coords = '[{"x1":59,"y1":55,"x2":237,"y2":95,"width":178,"height":40,"id":0,"page":1}]'
 #parsed = JSON.parse(coords)
 #puts parsed[0]

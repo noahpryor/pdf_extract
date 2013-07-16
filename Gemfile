@@ -6,8 +6,9 @@ source "http://rubygems.org"
 platform :jruby do
 	gem 'tabula-extractor',github: "jazzido/tabula-extractor", :require => "tabula"
 	gem 'tesseract-ocr'
-	gem 'image_voodoo'
 	gem 'docsplit'
+	gem "bundler", ">= 1.0.0"
+	gem "jeweler", "~> 1.8.4"
 
 end
 
@@ -15,7 +16,5 @@ end
 # Include everything needed to run rake, tests, features, etc.
 group :development do
  # gem "shoulda", ">= 0"
-  #gem "rdoc", "~> 3.12"
-  #gem "bundler", ">= 1.0.0"
-  #gem "jeweler", "~> 1.8.4"
+#  gem "rdoc", "~> 3.12"
 end

@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "pdf_extract"
-  s.version = "0.3.1"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["noah pryor"]
@@ -18,13 +18,23 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".ruby-version",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/document.pdf",
+    "lib/document_1.png",
+    "lib/document_560_1.png",
     "lib/pdf_extract.rb",
+    "pdf_extract-0.1.0.gem",
+    "pdf_extract-0.2.0.gem",
+    "pdf_extract-0.2.1.gem",
+    "pdf_extract-0.2.2.gem",
+    "pdf_extract-0.3.0.gem",
+    "pdf_extract-0.3.1.gem",
     "pdf_extract.gemspec",
     "test/helper.rb",
     "test/test_pdf_extract.rb"
@@ -41,29 +51,20 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<tabula-extractor>, [">= 0"])
       s.add_runtime_dependency(%q<tesseract-ocr>, [">= 0"])
-      s.add_runtime_dependency(%q<image_voodoo>, [">= 0"])
       s.add_runtime_dependency(%q<docsplit>, [">= 0"])
-      s.add_development_dependency(%q<shoulda>, [">= 0"])
-      s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_runtime_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_runtime_dependency(%q<jeweler>, ["~> 1.8.4"])
     else
       s.add_dependency(%q<tabula-extractor>, [">= 0"])
       s.add_dependency(%q<tesseract-ocr>, [">= 0"])
-      s.add_dependency(%q<image_voodoo>, [">= 0"])
       s.add_dependency(%q<docsplit>, [">= 0"])
-      s.add_dependency(%q<shoulda>, [">= 0"])
-      s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
     end
   else
     s.add_dependency(%q<tabula-extractor>, [">= 0"])
     s.add_dependency(%q<tesseract-ocr>, [">= 0"])
-    s.add_dependency(%q<image_voodoo>, [">= 0"])
     s.add_dependency(%q<docsplit>, [">= 0"])
-    s.add_dependency(%q<shoulda>, [">= 0"])
-    s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
   end
