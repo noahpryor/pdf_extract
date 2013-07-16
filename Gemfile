@@ -4,7 +4,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 platform :jruby do
-	gem 'tabula-extractor',github: "jazzido/tabula-extractor", :require => "tabula"
+#	gem 'tabula-extractor',github: "jazzido/tabula-extractor", :require => "tabula"
 	gem 'tesseract-ocr'
 	gem 'docsplit'
 	gem "bundler", ">= 1.0.0"
