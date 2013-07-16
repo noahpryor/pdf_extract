@@ -171,7 +171,7 @@ class PDFextract
 	end
 
 	def pdf_to_image_files(pages)
-		Docsplit.extract_images(file_path,:output => image_dir, :format => [:png], size: '560x')
+		Docsplit.extract_images(file_path,:output => image_dir, :format => [:png])
 	end
 
 	def pdf_to_text_files(pages)
@@ -185,7 +185,18 @@ class PDFextract
 		dimensions[:result] = text 
 		return text
 	end
-
+	def self.extract_ocr(image_path,coords)
+		x = coords["x1"]
+		y = coords["y1"]
+		width = coords["x2"] - x
+		height = coords["y2"] - y
+		puts [x,y,width,height]
+		engine = Tesseract::Engine.new(language: :eng)
+		engine.image = 'document_560_1.png'
+		engine.select x,y,width,height
+		text = engine.text.strip
+		return text
+	end
 
 	def self.example_schema 
 		{
@@ -227,3 +238,7 @@ class PDFextract
 
 end
 
+coords = '[{"x1":59,"y1":55,"x2":237,"y2":95,"width":178,"height":40,"id":0,"page":1}]'
+parsed = JSON.parse(coords)
+puts parsed[0]
+puts PDFextract.extract_ocr("document_560_1.pdf",parsed[0])
