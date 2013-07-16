@@ -186,13 +186,15 @@ class PDFextract
 		return text
 	end
 	def self.extract_ocr(image_path,coords)
+		
 		x = coords["x1"]
 		y = coords["y1"]
 		width = coords["x2"] - x
 		height = coords["y2"] - y
+		puts image_path
 		puts [x,y,width,height]
 		engine = Tesseract::Engine.new(language: :eng)
-		engine.image = 'document_560_1.png'
+		engine.image = image_path
 		engine.select x,y,width,height
 		text = engine.text.strip
 		return text
