@@ -1,4 +1,4 @@
-require 'java'
+
 require 'tesseract'
 require 'docsplit'
 #require 'image_voodoo'
